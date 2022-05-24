@@ -20,10 +20,13 @@ public class Jugador extends Futbolista implements Comparable {
 		return false;
 	}
 	
+	@Override
 	public int compareTo(Futbolista f) {
 		return Math.abs(this.getEdad() - f.getEdad());
 	}
 	
+	
+	@Override
 	public String toString() {
 		String mensaje_1 = ((Futbolista) this).toString();
 		return mensaje_1 + " con el dorsal " + this.dorsal + ". Ha marcado " + this.golesMarcados;
