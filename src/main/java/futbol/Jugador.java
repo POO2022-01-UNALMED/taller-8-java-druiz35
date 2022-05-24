@@ -21,14 +21,14 @@ public class Jugador extends Futbolista {
 	}
 	
 	@Override
-	public int compareTo(Futbolista f) {
-		return Math.abs(this.getEdad() - f.getEdad());
+	public int compareTo(Object f) {
+		return Math.abs(this.getEdad() - ((Futbolista) f).getEdad());
 	}
-	
 	
 	@Override
 	public String toString() {
-		String mensaje_1 = ((Futbolista) this).toString();
+		String mensaje_1 = super.toString();
 		return mensaje_1 + " con el dorsal " + this.dorsal + ". Ha marcado " + this.golesMarcados;
 	}
 }
+
